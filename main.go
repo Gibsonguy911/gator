@@ -35,6 +35,7 @@ func main() {
 
 	// register commands
 	cmds := shared.Commands{Commands: make(map[string]func(*shared.State, shared.Command) error)}
+	cmds.Register("help", handlers.Help)
 	cmds.Register("login", handlers.Login)
 	cmds.Register("register", handlers.Resiger)
 	cmds.Register("reset", handlers.Reset)
